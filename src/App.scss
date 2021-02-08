@@ -1,0 +1,66 @@
+@import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+
+$font-size-base: 0.9rem !default; 
+$font-family-sans-serif:  "Expletus", Helvetica, Arial, sans-serif !default;
+$bg-secondary: #F9F8FD;
+$bg-primary: #59bdee;
+$dark-black: #31374D;
+$white-color: #FFFF;
+
+body {
+    font-family: "Expletus";
+}
+
+.navbar-light .navbar-nav .nav-link {
+    font-size: 17px;
+    color: white;
+}
+
+.nav-item .active{
+    border-bottom: 2px solid #B47EB3;
+   
+}
+
+.nav-top{
+    background-color: white;
+    opacity: .95;
+}
+
+
+.oblique-text {
+    font-style: oblique;
+    font-size: 20px;
+}
+
+.primary-color{
+    color: #59bdee;
+}
+
+.bg-primary {
+    background-color: $bg-primary!important;
+}
+#modal-textarea {
+    height: 150px;
+}
+.btn-secondary {
+    color: #000;
+    background-color: #FFFF;
+}
+
+.painter-img {
+    margin-left: -250px;
+
+    @media only screen and (max-width:1198px){
+        display: none;
+    }
+}
+
+@media only screen and (max-width:768px) {
+ 
+    
+}
+@media screen and (max-width: 450px) and (min-width: 450px){
+ 
+}
+ 
