@@ -17,15 +17,30 @@ body {
     color: white;
 }
 
-.nav-item .active{
-    border-bottom: 2px solid #B47EB3;
-   
-}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-.nav-top{
-    background-color: white;
-    opacity: .95;
+
+.company-name{
+    font-size: 57px;
+    color: white;
 }
+// .main-page{
+
+// }
+// .nav-item .active{
+//     border-bottom: 2px solid #B47EB3;
+   
+// }
+
+// .nav-top{
+//     background-color: white;
+//     opacity: .95;
+// }
 
 
 .oblique-text {
