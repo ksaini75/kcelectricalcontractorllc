@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+
+$bg-primary: #59bdee;
+$btn-hover: #4a99c0;
+
+.main-img {
+    width: 100%;
+}
+
+.centered {
+    position: absolute;
+    top: 33%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.centered-below {
+    position: absolute;
+    top: 90%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+
+.centered-btn {
+    position: absolute;
+    top: 200%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.company-tag {
+    font-size: 20px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.company-name {
+    font-size: 52px;
+    color: white;
+    font-family: 'Roboto Condensed';
+}
+
+.company-btn {
+    font-weight: bold;
+    border: none;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 8px;
+    text-shadow: 2px 1px black;
+    background-color: $bg-primary;
+}
+
+.company-btn:hover {
+    background-color: $btn-hover;
+}
+
+@media only screen and (max-width:1024px) {
+
+    .company-name {
+        font-size: 22px;
+        color: white;
+        font-family: 'Roboto Condensed';
+        margin-bottom: 21px;
+    }
+
+    .company-tag {
+        font-size: 11px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 25px;
+    }
+
+    .company-btn {
+        width: 256px;
+        font-weight: 700;
+        border: none;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 20px;
+        margin: -35px -17px;
+        border-radius: 8px;
+        background-color: #59bdee;
+    }
+    .centered {
+        position: absolute;
+        top: 12%;
+        left: 53%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+@media only screen and (max-width:360px) {
+
+    .centered {
+        position: absolute;
+        top: 15%;
+        left: 53%;
+        transform: translate(-50%, -50%);
+    }
+    .company-name {
+        font-size: 22px;
+        color: white;
+        font-family: 'Roboto Condensed';
+        margin-bottom: 21px;
+    }
+
+    .company-tag {
+        font-size: 11px;
+        color: white;
+        font-family: 'Roboto', sans-serif;
+        margin-bottom: 25px;
+    }
+
+}
