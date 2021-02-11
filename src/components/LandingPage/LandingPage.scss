@@ -8,18 +8,22 @@ $btn-hover: #4a99c0;
     width: 100%;
 }
 
+.align-title-center {
+    display: flex;
+}
+
 .centered {
-    position: absolute;
+    position: relative;
     top: 33%;
     left: 55%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -405%);
 }
 
 .centered-below {
     position: absolute;
     top: 90%;
     left: 55%;
-    transform: translate(-50%, -50%);
+    transform: translate(-56%, -50%);
 }
 
 
@@ -50,7 +54,7 @@ $btn-hover: #4a99c0;
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    margin: 4px 2px;
+    width: 233px;
     border-radius: 8px;
     text-shadow: 2px 1px black;
     background-color: $bg-primary;
@@ -63,7 +67,7 @@ $btn-hover: #4a99c0;
 @media only screen and (max-width:1024px) {
 
     .company-name {
-        font-size: 22px;
+        font-size: 38px;
         color: white;
         font-family: 'Roboto Condensed';
         margin-bottom: 21px;
@@ -88,23 +92,49 @@ $btn-hover: #4a99c0;
         border-radius: 8px;
         background-color: #59bdee;
     }
+
     .centered {
-        position: absolute;
+        position: relative;
         top: 12%;
         left: 53%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -306%);
     }
 }
 
 
+@media only screen and (max-width:540px) {
+    .centered {
+        position: relative;
+        top: 12%;
+        left: 53%;
+        transform: translate(-50%, -193%);
+    }
+}
+
+@media only screen and (max-width:480px) {
+
+    .company-name {
+        font-size: 22px;
+
+    }
+
+    .centered {
+        position: relative;
+        top: 15%;
+        left: 53%;
+        transform: translate(-50%, -202%);
+    }
+}
+
 @media only screen and (max-width:360px) {
 
     .centered {
-        position: absolute;
+        position: relative;
         top: 15%;
         left: 53%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -198%);
     }
+
     .company-name {
         font-size: 22px;
         color: white;
