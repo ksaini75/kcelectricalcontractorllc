@@ -2,18 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as  Route, Switch } from "react-router-dom";
 import NavigationBar from './components/NavigationBar/NavigationBar'
+import LandingPage from './components/LandingPage/LandingPage';
 import './App.scss';
 
 import reportWebVitals from './reportWebVitals';
 
+
 const routing= (
 <Route>
 <NavigationBar/>
+<LandingPage/>
         <Switch>
-          {/* <Route path='/' exact component={Home} />
-          <Route path='/home' exact component={Home} />
-          <Route path="/about" exact component={About} /> */}
-          </Switch>
+           <Route path='/' exact component={LandingPage} /> 
+        </Switch>
 </Route>
 
 )
