@@ -1,10 +1,9 @@
 @import "~bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap');
 
 $font-size-base: 0.9rem !default;
-$font-family-sans-serif: "Expletus",
-Helvetica,
-Arial,
+$font-family-sans-serif: "Roboto",
 sans-serif !default;
 $bg-secondary: #F9F8FD;
 $bg-primary: #59bdee;
@@ -12,7 +11,7 @@ $dark-black: #31374D;
 $white-color: #FFFF;
 
 body {
-    font-family: "Expletus";
+    font-family: $font-family-sans-serif;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -20,10 +19,6 @@ body {
     color: white;
 }
 
-// .nav-item .active{
-//     border-bottom: 2px solid #B47EB3;
-
-// }
 
 .nav-top {
     background-color: white;
