@@ -12,14 +12,14 @@ $btn-hover: #4a99c0;
 .centered {
     position: relative;
     top: 33%;
-    left: 55%;
+    left: 50%;
     transform: translate(-50%, -343%);
 }
 
 .centered-below {
     position: absolute;
     top: 90%;
-    left: 55%;
+    left: 50%;
     transform: translate(-56%, -50%);
 }
 
@@ -27,7 +27,7 @@ $btn-hover: #4a99c0;
 .centered-btn {
     position: absolute;
     top: 200%;
-    left: 55%;
+    left: 68%;
     transform: translate(-50%, -50%);
 }
 
@@ -51,18 +51,17 @@ $btn-hover: #4a99c0;
     text-align: center;
     text-decoration: none;
     font-size: 22px;
-    width: 264px;
+    width: 233px;
     border-radius: 8px;
-    text-shadow: 0px 0px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 0px 1px 0 #000, 0px 1px 0 #000;
-    background-color: #59bdee;
-    font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px black;
+    background-color: $bg-primary;
 }
 
 .company-btn:hover {
     background-color: $btn-hover;
 }
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:1198px) {
 
     .company-name {
         font-size: 38px;
@@ -79,7 +78,7 @@ $btn-hover: #4a99c0;
     }
 
     .company-btn {
-        width: 224px;
+        width: 256px;
         font-weight: 700;
         border: none;
         color: white;
@@ -96,6 +95,15 @@ $btn-hover: #4a99c0;
         top: 12%;
         left: 53%;
         transform: translate(-50%, -306%);
+    }
+}
+
+@media only screen and (max-width:968px) {
+    .centered {
+        position: relative;
+        top: 12%;
+        left: 53%;
+        transform: translate(-50%, -193%);
     }
 }
 
