@@ -1,15 +1,17 @@
 @import "~bootstrap/scss/bootstrap";
-@import url('https://fonts.googleapis.com/css2?family=Expletus+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,700&display=swap');
 
-$font-size-base: 0.9rem !default; 
-$font-family-sans-serif:  "Expletus", Helvetica, Arial, sans-serif !default;
+$font-size-base: 0.9rem !default;
+$font-family-sans-serif: "Roboto",
+sans-serif !default;
 $bg-secondary: #F9F8FD;
 $bg-primary: #59bdee;
 $dark-black: #31374D;
 $white-color: #FFFF;
 
 body {
-    font-family: "Expletus";
+    font-family: $font-family-sans-serif;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -17,25 +19,22 @@ body {
     color: white;
 }
 
-// .nav-item .active{
-//     border-bottom: 2px solid #B47EB3;
-   
-// }
 
-.nav-top{
+.nav-top {
     background-color: white;
     opacity: .95;
 }
 
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus{
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus {
     color: $bg-primary;
 }
 
-.nav-title{
-    color:white !important;
+.nav-title {
+    color: white !important;
 }
 
-.bg-dark{
+.bg-dark {
     background-color: black !important;
 }
 
@@ -44,61 +43,63 @@ body {
     font-size: 20px;
 }
 
-.primary-color{
+.primary-color {
     color: #59bdee;
 }
 
 .bg-primary {
-    background-color: $bg-primary!important;
+    background-color: $bg-primary !important;
 }
+
 #modal-textarea {
     height: 150px;
 }
+
 .btn-secondary {
     color: #000;
     background-color: #FFFF;
 }
 
-.ken-logo{
+.ken-logo {
     width: 30px;
 
     margin-bottom: 10px;
 }
 
 .navbar-toggler {
-    background-color:white !important;
+    background-color: black !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/kcelectricalcontractorll.appspot.com/o/Photos%2Fclipart365828.png?alt=media&token=f843391a-cc02-4715-9042-45e522e07ff8);
 }
 
 
-
-.navbar-nav .nav-link{
+.navbar-nav .nav-link {
     text-align: center;
 }
-
-
-
-
 
 .painter-img {
     margin-left: -250px;
 
-    @media only screen and (max-width:1198px){
+    @media only screen and (max-width:1198px) {
         display: none;
-        
+
     }
 }
 
 @media only screen and (max-width:768px) {
 
-    .ken-logo{
+    .ken-logo {
         width: 30px;
-   
+
         margin-bottom: 10px;
     }
-    .nav-title{
-        color:white !important;
-        font-size: 15.5px !important;
+
+    .nav-title {
+        display: none;
     }
-    
+
 }
-@media screen and (max-width: 450px) and (min-width: 450px){}
+
+@media screen and (max-width: 450px) and (min-width: 450px) {}
