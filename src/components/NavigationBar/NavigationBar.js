@@ -1,13 +1,17 @@
 import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Image from 'react-bootstrap/Image';
+import logo from '../../Images/ken-logo.png';
 
 
 const NavigationBar = () => (
    
         <Navbar expand="lg" bg="dark" className="nav">
-            <Navbar.Brand href="/home">kcelectricalcontractorllc</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+         <Image className='ken-logo' src={logo}/>
+            <Navbar.Brand className="nav-title" href="/home">KCElectricalcontractorLLC</Navbar.Brand>
+           
+            <Navbar.Toggle aria-controls="basic-navbar-nav" className='custom-toggler-icon'/>
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className ="ml-auto">
                 <Nav.Item><Nav.Link href="/">Home</Nav.Link></Nav.Item>
