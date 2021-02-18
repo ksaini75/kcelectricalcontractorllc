@@ -39,9 +39,11 @@ $bg-primary: #59bdee;
 
 }
 
-.image-container:hover .img-description {
-    display: block;
-    background: $bg-primary;
+.image-container:hover {
+    border: 1px solid;
+    padding: 2px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 2px 2px $bg-primary;
 }
 
 .row {
@@ -50,7 +52,7 @@ $bg-primary: #59bdee;
     margin-right: 65px;
 }
 
-@media only screen and (max-width:1024px) {
+@media only screen and (max-width:1277px) {
     .row {
         margin-left: 26px;
         margin-right: 10px;
@@ -66,38 +68,9 @@ $bg-primary: #59bdee;
     }
 }
 
-// @media only screen and (max-width:768px) {
-//     .row {
-//         margin-left: -93px;
-//         margin-right: 7px;
-//     }
-
-//     .about-text {
-//         font-size: 16px;
-//     }
-
-//     #first {
-//         order: 1 !important;
-//         margin: 0 -57px;
-//     }
-
-//     #second {
-//         order: 2 !important;
-//         margin: 778px 17px;
-//         margin-left: 179px;
-//         margin-right: -169px;
-//     }
-
-//     .text-center {
-//         text-align: revert;
-
-//     }
-// }
-
-@media only screen and (max-width:411px) {
+@media only screen and (max-width:414px) {
     .row {
         margin-left: -93px;
-        margin-right: 7px;
     }
 
     .about-text {
@@ -115,10 +88,11 @@ $bg-primary: #59bdee;
         margin-left: 179px;
         margin-right: -169px;
     }
- .text-center{
-     text-align: revert !important;
- }
- 
+
+    .text-center {
+        text-align: revert !important;
+    }
+
 }
 
 @media only screen and (max-width:320px) {
