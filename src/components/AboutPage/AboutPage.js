@@ -104,7 +104,7 @@ const AboutPage = () => {
     setImgIndex(index);
   }
 
-
+  
   return (
     <React.Fragment>
 
