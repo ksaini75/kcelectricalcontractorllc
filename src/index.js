@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as  Route, Switch } from "react-router-dom";
 import NavigationBar from './components/NavigationBar/NavigationBar'
 import LandingPage from './components/LandingPage/LandingPage';
+import ServicePage from './components/ServicePage/ServicePage';
 import './App.scss';
 
 import reportWebVitals from './reportWebVitals';
@@ -12,6 +13,7 @@ const routing= (
 <Route>
 <NavigationBar/>
 <LandingPage/>
+<ServicePage/>
         <Switch>
            <Route path='/' exact component={LandingPage} /> 
         </Switch>
