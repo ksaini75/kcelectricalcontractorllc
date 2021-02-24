@@ -3,15 +3,18 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as  Route, Switch } from "react-router-dom";
 import NavigationBar from './components/NavigationBar/NavigationBar'
 import LandingPage from './components/LandingPage/LandingPage';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import './App.scss';
 
 import reportWebVitals from './reportWebVitals';
+import AboutPage from './components/AboutPage/AboutPage';
 
 
 const routing= (
 <Route>
 <NavigationBar/>
 <LandingPage/>
+<AboutPage/>
         <Switch>
            <Route path='/' exact component={LandingPage} /> 
         </Switch>
