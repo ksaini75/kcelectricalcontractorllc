@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as  Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavigationBar from './components/NavigationBar/NavigationBar'
 import LandingPage from './components/LandingPage/LandingPage';
 import ServicePage from './components/ServicePage/ServicePage';
@@ -10,14 +10,14 @@ import reportWebVitals from './reportWebVitals';
 
 
 const routing= (
-<Route>
+<Router>
 <NavigationBar/>
 <LandingPage/>
 <ServicePage/>
         <Switch>
-           <Route path='/' exact component={LandingPage} /> 
+           <Router path='/' exact component={LandingPage} /> 
         </Switch>
-</Route>
+</Router>
 
 )
 
