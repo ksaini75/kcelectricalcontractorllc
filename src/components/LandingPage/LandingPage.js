@@ -1,4 +1,3 @@
-import { Button } from 'reactstrap';
 import React from 'react';
 import Electrican from '../../Images/lightbulbs_cut_dark.png';
 import './LandingPage.scss';
