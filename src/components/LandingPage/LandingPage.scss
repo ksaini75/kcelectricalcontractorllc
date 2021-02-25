@@ -38,7 +38,8 @@ $btn-hover: #4a99c0;
 }
 
 .company-name {
-    font-size: 52px;
+    font-size: 52px !important;
+    // overflow: visible;
     color: white;
     font-family: 'Roboto Condensed';
 }
@@ -51,7 +52,7 @@ $btn-hover: #4a99c0;
     text-align: center;
     text-decoration: none;
     font-size: 22px;
-    width: 233px;
+    width: 248px;
     border-radius: 8px;
     text-shadow: 2px 2px black;
     background-color: $bg-primary;
@@ -107,6 +108,18 @@ $btn-hover: #4a99c0;
     }
 }
 
+@media only screen and (max-width:630px) {
+    .centered {
+        position: relative;
+        top: 12%;
+        left: 53%;
+        transform: translate(-50%, -193%);
+    }
+
+    .company-name{
+        font-size: 31px !important;
+    }
+}
 
 @media only screen and (max-width:540px) {
     .centered {
@@ -115,12 +128,16 @@ $btn-hover: #4a99c0;
         left: 53%;
         transform: translate(-50%, -193%);
     }
+
+    .company-name{
+        font-size: 31px !important;
+    }
 }
 
 @media only screen and (max-width:480px) {
 
     .company-name {
-        font-size: 22px;
+        font-size: 22px !important;
 
     }
 
@@ -142,7 +159,7 @@ $btn-hover: #4a99c0;
     }
 
     .company-name {
-        font-size: 22px;
+        font-size: 22px !important;
         color: white;
         font-family: 'Roboto Condensed';
         margin-bottom: 21px;

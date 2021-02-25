@@ -115,7 +115,7 @@ const AboutPage = () => {
               <h1 className="about-title text-center" >About Me</h1>
             </div>
             <div><p className="about-text text-center" >I have 8 years in residential and commercial and also know how to troubleshoot and also know how to install panels how to wire trace install new breakers and how to install ceiling fans sconces light in new and old construction services ceiling fan and new and old works
-            He doesn’t want a picture so maybe just not put that right now</p>
+            </p>
             </div>
           </div>
 
