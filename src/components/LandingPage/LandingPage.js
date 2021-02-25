@@ -1,5 +1,7 @@
 import React from 'react';
 import Electrican from '../../Images/lightbulbs_cut_dark.png';
+import AboutPage from '../AboutPage/AboutPage';
+import ServicePage from '../ServicePage/ServicePage';
 import './LandingPage.scss';
 
 const LandingPage = () => {
@@ -23,7 +25,10 @@ const LandingPage = () => {
                 </div>
                 </div>
             </div>
+            <AboutPage/>
+            
         </React.Fragment>
+        
     );
 
 }
