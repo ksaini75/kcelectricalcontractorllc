@@ -1,21 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavigationBar from './components/NavigationBar/NavigationBar'
+import NavigationBar from './components/NavigationBar/NavigationBar';
 import LandingPage from './components/LandingPage/LandingPage';
 import ServicePage from './components/ServicePage/ServicePage';
+import AboutPage from './components/AboutPage/AboutPage';
 import './App.scss';
 
 import reportWebVitals from './reportWebVitals';
-
 
 const routing= (
 <Router>
 <NavigationBar/>
 <LandingPage/>
 <ServicePage/>
+<AboutPage/>
         <Switch>
-           <Router path='/' exact component={LandingPage} /> 
+           <Route path='/' exact component={LandingPage} /> 
         </Switch>
 </Router>
 
