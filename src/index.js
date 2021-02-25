@@ -13,8 +13,6 @@ const routing= (
 <Router>
 <NavigationBar/>
 <LandingPage/>
-<ServicePage/>
-<AboutPage/>
         <Switch>
            <Route path='/' exact component={LandingPage} /> 
         </Switch>
