@@ -1,24 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as  Route, Switch } from "react-router-dom";
-import NavigationBar from './components/NavigationBar/NavigationBar'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NavigationBar from './components/NavigationBar/NavigationBar';
 import LandingPage from './components/LandingPage/LandingPage';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; 
+import ServicePage from './components/ServicePage/ServicePage';
+import AboutPage from './components/AboutPage/AboutPage';
 import './App.scss';
 
 import reportWebVitals from './reportWebVitals';
-import AboutPage from './components/AboutPage/AboutPage';
-
 
 const routing= (
-<Route>
+<Router>
 <NavigationBar/>
 <LandingPage/>
+<ServicePage/>
 <AboutPage/>
         <Switch>
            <Route path='/' exact component={LandingPage} /> 
         </Switch>
-</Route>
+</Router>
 
 )
 
