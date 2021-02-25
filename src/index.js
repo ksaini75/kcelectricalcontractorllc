@@ -7,14 +7,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import './App.scss';
 
 import reportWebVitals from './reportWebVitals';
-import AboutPage from './components/AboutPage/AboutPage';
+
 
 
 const routing= (
 <Route>
 <NavigationBar/>
 <LandingPage/>
-<AboutPage/>
         <Switch>
            <Route path='/' exact component={LandingPage} /> 
         </Switch>
