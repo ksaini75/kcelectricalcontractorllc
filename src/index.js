@@ -12,9 +12,8 @@ import reportWebVitals from './reportWebVitals';
 const routing= (
 <Router>
 <NavigationBar/>
-<LandingPage/>
         <Switch>
-           <Route path='/' exact component={LandingPage} /> 
+           <Route path='/' exact component={LandingPage}/> 
         </Switch>
 </Router>
 
