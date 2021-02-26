@@ -46,7 +46,7 @@ $bg-primary: #59bdee;
     box-shadow: 0px 2px 5px 2px $bg-primary;
 }
 
-@media only screen and (max-width:1277px) {
+@media only screen and (min-width:1277px) {
     .about-text {
         color: white;
         font-size: 23px;
@@ -57,7 +57,7 @@ $bg-primary: #59bdee;
     }
 }
 
-@media only screen and (max-width:991px) {
+@media only screen and (max-width:767px) {
     .about-text { 
         font-size: 20px; 
         text-align: center; 
