@@ -1,8 +1,5 @@
-import { Button } from 'reactstrap';
 import React from 'react';
-import Electrican from '../../Images/lightbulbs_cut_dark.png';
 import AboutPage from '../AboutPage/AboutPage';
-import ServicePage from '../ServicePage/ServicePage';
 import './LandingPage.scss';
 
 const LandingPage = () => {
@@ -11,25 +8,19 @@ const LandingPage = () => {
     return (
         <React.Fragment>
 
-            <div className="main-page mb-5" id="home">
-                <img src={Electrican} alt="landing" className="main-img" />
-              <div className="align-title-center">
-                <div className="centered">
-                    <p className="company-name"> KCElectricalContractorLLC</p>
+            <div className="main-img mb-5" id="home">
+              <div className="container text-center">
+                    <p className="company-name text-center">KCElectricalContractorLLC</p>
+                    <p className="company-tag">Company is Insured</p>
+                    <button className=" company-btn">Request An Estimate</button>
+                </div>
 
-                    <div className="centered-below">
-                        <p className="company-tag">Company is Insured</p>
-                        <div>
-                            <span> <button className="centered-btn company-btn">Request An Estimate</button> </span>
-                        </div>
-                    </div>
-                </div>
-                </div>
-            </div>
-            <AboutPage/>
-            
+            </div>  
+
+            <AboutPage />
+
         </React.Fragment>
-        
+
     );
 
 }
