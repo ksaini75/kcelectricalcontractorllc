@@ -3,10 +3,10 @@ $btn-hover: #4a99c0;
 
 .main-img {
     width: 100%;
-}
-
-.align-title-center {
-    display: flex;
+    background-image: url("../../Images/lightbulbs_cut_dark.png");
+    height: 35vw;
+    width: 100%;
+    background-size: cover;
 }
 
 .centered {
@@ -38,8 +38,9 @@ $btn-hover: #4a99c0;
 }
 
 .company-name {
-    font-size: 52px !important;
-    // overflow: visible;
+    font-size: 7vw;
+    line-height: 3.9;
+    margin-bottom: -11vw;
     color: white;
     font-family: 'Roboto Condensed';
 }
@@ -62,114 +63,18 @@ $btn-hover: #4a99c0;
     background-color: $btn-hover;
 }
 
-@media only screen and (max-width:1198px) {
+@media only screen and (max-width:768px) {
 
     .company-name {
-        font-size: 38px;
-        color: white;
-        font-family: 'Roboto Condensed';
-        margin-bottom: 21px;
+        display: none;
     }
 
     .company-tag {
-        font-size: 11px;
-        color: white;
-        font-family: 'Roboto', sans-serif;
-        margin-bottom: 25px;
+        display: none;
     }
 
     .company-btn {
-        width: 256px;
-        font-weight: 700;
-        border: none;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        font-size: 20px;
-        margin: -35px -17px;
-        border-radius: 8px;
-        background-color: #59bdee;
-    }
-
-    .centered {
-        position: relative;
-        top: 12%;
-        left: 53%;
-        transform: translate(-50%, -306%);
-    }
-}
-
-@media only screen and (max-width:968px) {
-    .centered {
-        position: relative;
-        top: 12%;
-        left: 53%;
-        transform: translate(-50%, -193%);
-    }
-}
-
-@media only screen and (max-width:630px) {
-    .centered {
-        position: relative;
-        top: 12%;
-        left: 53%;
-        transform: translate(-50%, -193%);
-    }
-
-    .company-name{
-        font-size: 31px !important;
-    }
-}
-
-@media only screen and (max-width:540px) {
-    .centered {
-        position: relative;
-        top: 12%;
-        left: 53%;
-        transform: translate(-50%, -193%);
-    }
-
-    .company-name{
-        font-size: 31px !important;
-    }
-}
-
-@media only screen and (max-width:480px) {
-
-    .company-name {
-        font-size: 22px !important;
-
-    }
-
-    .centered {
-        position: relative;
-        top: 15%;
-        left: 53%;
-        transform: translate(-50%, -202%);
-    }
-}
-
-@media only screen and (max-width:360px) {
-
-    .centered {
-        position: relative;
-        top: 15%;
-        left: 53%;
-        transform: translate(-50%, -198%);
-    }
-
-    .company-name {
-        font-size: 22px !important;
-        color: white;
-        font-family: 'Roboto Condensed';
-        margin-bottom: 21px;
-    }
-
-    .company-tag {
-        font-size: 11px;
-        color: white;
-        font-family: 'Roboto', sans-serif;
-        margin-bottom: 25px;
+        margin-top: 10vw;
     }
 
 }
