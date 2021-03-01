@@ -1,9 +1,5 @@
-import React, {
-    Component
-} from 'react';
-import {
-    FaInstagram
-} from 'react-icons/fa';
+import React, {Component} from 'react';
+import { FaInstagram} from 'react-icons/fa';
 import './Footer.scss';
 
 class Footer extends Component {
