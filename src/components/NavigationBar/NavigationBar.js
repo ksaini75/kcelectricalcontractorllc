@@ -1,4 +1,5 @@
 import React from 'react';
+import { Image } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import logo from '../../Images/ken-logo.png';
@@ -7,7 +8,7 @@ import logo from '../../Images/ken-logo.png';
 const NavigationBar = () => (
    
         <Navbar expand="lg" bg="dark" className="nav">
-         <img className='ken-logo' src={logo}/>
+         <Image className='ken-logo' src={logo}/>
             <Navbar.Brand className="nav-title" href="/home">KCElectricalcontractorLLC</Navbar.Brand>
            
             <Navbar.Toggle aria-controls="basic-navbar-nav" className='custom-toggler-icon'/>
