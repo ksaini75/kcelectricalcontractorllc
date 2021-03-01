@@ -6,12 +6,16 @@ import LandingPage from './components/LandingPage/LandingPage';
 import './App.scss';
 
 import reportWebVitals from './reportWebVitals';
+import ContactPage from './components/ContactPage/ContactPage';
+import AboutPage from './components/AboutPage/AboutPage'
 
 const routing= (
 <Router>
 <NavigationBar/>
         <Switch>
            <Route path='/' exact component={LandingPage}/> 
+           <Route path='/About' exact component={AboutPage}/>
+           <Route path='/Contact' exact component={ContactPage}/>
         </Switch>
 </Router>
 

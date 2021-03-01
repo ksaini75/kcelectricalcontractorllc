@@ -13,7 +13,7 @@ const LandingPage = () => {
               <div className="container text-center">
                     <p className="company-name text-center">KCElectricalContractorLLC</p>
                     <p className="company-tag">Company is Insured</p>
-                    <button className=" company-btn">Request An Estimate</button>
+                    <button className="company-btn">Request An Estimate</button>
                 </div>
 
             </div>  
