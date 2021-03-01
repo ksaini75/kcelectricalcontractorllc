@@ -1,5 +1,6 @@
 import React from 'react';
 import AboutPage from '../AboutPage/AboutPage';
+import ServicePage from '../ServicePage/ServicePage';
 import './LandingPage.scss';
 
 const LandingPage = () => {
@@ -16,8 +17,10 @@ const LandingPage = () => {
                 </div>
 
             </div>  
-
+            
+            <ServicePage/>
             <AboutPage />
+            
 
         </React.Fragment>
 

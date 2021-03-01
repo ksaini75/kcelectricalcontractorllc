@@ -1,52 +1,54 @@
 import React from 'react';
-import Image from 'react-bootstrap/Image';
-import Container from 'react-bootstrap/Container';
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import plugLogo from '../../Images/plug.png';
 import brokenCables from '../../Images/broken-cable.png';
 import multimeter from '../../Images/multimeter.png';
 import { GiLightBulb } from 'react-icons/gi';
+import './ServicePage.scss';
 
 
 const ServicePage = () => {
     return (
         <React.Fragment>
-            <div className='services-div'>
-                <h1 className='services-header'>Electrical Services</h1>
-                <Container>
-                    <Row className='services-row'>
-                        <Col className="services-column" xs={6} md={4}>
-                            <Image className='services-logo img-responsive' src={plugLogo}>
-                            </Image>
+            <div className='services-div container'>
+                <h1 className='services-header text-center'>Electrical Services</h1>
+                <div className="container">
+                    <div className='row mb-5'>
+
+                        <div className="col-md-5"  id="kc-icons">
+                            <img className='services-logo icons' src={plugLogo}/>
+                            
+                        </div>
+                        <div className="col-md-5" id="kc-icons">
+                            <img className='services-logo icons' src={brokenCables}/>
+                        </div>
+                        <div className="col-md-2" id="kc-icons">
+                            <img className='services-logo icons' src={multimeter}/>
+                        </div>
+                    </div>
+
+                    <div className='row mb-5 ' >
+
+                        <div className="col-md-5 service-text" id="kc-text">
                             <p> <GiLightBulb /> Switch and outlet installation</p>
                             <p> <GiLightBulb />Electirical and wiring repair</p>
                             <p> <GiLightBulb />Remodeling</p>
-                            <span className='li-hide'>
-                                <p> <GiLightBulb />Circuit breaker panel or fuse box installation</p>
+                            <p> <GiLightBulb />Circuit breaker panel or fuse box installation/repair</p>
 
-                                <p> <GiLightBulb />Circuit breaker panel or fuse box repair</p>
-                            </span>
+                        </div>
+                        <div className="col-md-5 service-text" id="kc-text">
 
-                        </Col>
-                        <Col className="services-column" xs={6} md={4}>
-                            <Image className='services-logo img-responsive' src={brokenCables}></Image>
-                            <span className='li-hide'>
-                                <p> <GiLightBulb /> Renovations or additions Indoor or outdoor lighting</p>
-                            </span>
+                            <p> <GiLightBulb /> Renovations or additions Indoor or outdoor lighting</p>
                             <p><GiLightBulb /> Inspections</p>
-                            <p><GiLightBulb /> Wiring Repairs</p>
-                            <p><GiLightBulb /> Wiring installation</p>
-                        </Col>
-                        <Col className="services-column" xs={6} md={4}>
-                            <Image className='services-logo img-responsive' src={multimeter}></Image>
+                            <p><GiLightBulb /> Wiring installation/Wiring Repairs</p>
+                        </div>
+                        <div className="col-md-2 service-text" id="kc-text">
                             <p><GiLightBulb /> Fan installation</p>
-                            <p><GiLightBulb /> Generator installation</p>
                             <p><GiLightBulb /> Lighting installation</p>
                             <p><GiLightBulb /> Switch and outlet repair</p>
-                        </Col>
-                    </Row>
-                </Container>
+                            <p><GiLightBulb /> Generator installation</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </React.Fragment>
 
