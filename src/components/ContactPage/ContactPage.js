@@ -13,39 +13,40 @@ import './ContactPage.scss';
 
 const ContactPage = () => {
   return (
-        <div>
+        <div> 
+                
             <Container className='mt-5'>
                 <h1 className="contact-header-one">Get In Touch!</h1>
                 <h3 className='contact-header-two'>Contact Us for a Quote</h3>
             </Container>
 
-            <Row className=" mt-5 mb-5">
-                <Col md ={6} className=" text-center">
+            <Row className="mt-5 mb-5">
+                <Col md ={5} className="text-center">
                     <FaPhoneAlt className="contact-icons"/>
-                    <h5 className="mt-3"> (347)-997-0315</h5>
+                    <h5 className="contact-info mt-3"> (347)-997-0315</h5>
                 </Col>
 
-                <Col md={6} className=" text-center">
+                <Col md={7} className=" text-center">
                    <HiOutlineMail className="contact-icons"/>
-                   <h5 className="mt-3">KCelectrialcontractorllc@gmail.com</h5>
+                   <h5 className="contact-info mt-3">KCelectrialcontractorllc@gmail.com</h5>
                 </Col>
             </Row>
 
-            <Container className="mb-5">
-                <Card className='contact-card mb-3'>
-                    <Card.Body> Monday to Friday    {' '}   8AM to 4PM</Card.Body>
-                </Card>
-            </Container>
-            
-            <Container className='mt-5'>
-                 <h1 className="contact-header-one">Contact Form</h1>
-            </Container>
+            <h1 className="contact-header-one mt-5">Open Hours</h1>
+                <Col md={12}>
+                <Card className='contact-card '>
+                    <Card.Body> Monday to Friday: <br/>8AM to 4PM</Card.Body>
+            </Card>
+            </Col>
 
-            <Col md={12} className="contact-form mb-10">
-                 <Form>
+            
+
+            <Col md={12} className="contact-form mb-10 mt-5">
+                 <Form className="justify-content-center">
                     <Form.Group controlid="formBasicName">
                         <Form.Label className="d-block text-left">Name</Form.Label>
                         <Form.Control 
+                       
                         type="text" 
                         name="name" 
                         placeholder="Name" 
@@ -83,7 +84,7 @@ const ContactPage = () => {
                             className=""
                             placeholder="Please select a service"
                             required>
-                            <option>Please select a service</option>
+                            <option>Select a service</option>
                             <option>Switch and outlet installation</option>
                             <option>Electical and wiring repair</option>
                             <option>Circuit breaker panel or fuse box installation</option>
