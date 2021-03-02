@@ -1,0 +1,16 @@
+.icons{
+    width: 11vw;
+    height: 12vw;
+}
+
+@media only screen and (max-width:767px) {
+
+    .icons{
+        display: none;
+    }
+    .service-text{
+        font-size: 5vw;
+    }
+    
+
+}
