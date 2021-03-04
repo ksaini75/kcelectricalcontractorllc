@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col, Container } from 'reactstrap';
 import ImageGallery from 'react-image-gallery';
 import './AboutPage.scss';
+import { Image } from 'react-bootstrap';
 
 
 const AboutPage = () => {
@@ -89,11 +90,11 @@ const AboutPage = () => {
   ];
 
   const galleryImages = gallery.map((img) =>
-    <div className="col-md-4 mb-4 image-container img-wrap img-gallery" key={img.startIndex} onClick={() => imageClick(img.startIndex)} >
-      <img src={img.original} alt={img.description} className="img-fluid rounded" />
+    <Col className="mb-4 image-container img-wrap img-gallery" md={3} key={img.startIndex} onClick={() => imageClick(img.startIndex)} >
+      <Image src={img.original} alt={img.description} className="img-fluid rounded" />
       <div className="img-description text-center img-fluid mx-auto">
       </div>
-    </div>
+    </Col>
 
   );
   const [modal, setModal] = useState(false);
@@ -107,30 +108,26 @@ const AboutPage = () => {
 
   return (
     <React.Fragment>
-
-
-
       <div className="about-page mb-5" id="about">
-        <div className="container text-center">
-          <div className="row" id="about-section">
-            <div className="col-md-6 mt-5" id="first">
+        <Container className="text-center">
+          <Row id="about-section">
+            <Col className="mt-5" md={6} id="first">
               <div>
                 <h1 className="about-title text-center mb-4" >About Me</h1>
               </div>
               <div>
-                <p className="about-text text-center" >I have 8 years in residential and commercial and also know how to troubleshoot and also know how to install panels how to wire trace install new breakers and how to install ceiling fans sconces light in new and old construction services ceiling fan and new and old works.
+                <p className="about-text text-center mb-5" >I have 8 years in residential and commercial and also know how to troubleshoot and also know how to install panels how to wire trace install new breakers and how to install ceiling fans sconces light in new and old construction services ceiling fan and new and old works.
             </p>
               </div>
-            </div>
+            </Col>
 
-            <div className="col-md-6 mt-5" id="second">
-              <div className="row gallery-row" >
+            <Col className="mt-5" md={6} id="second">
+              <Row className="gallery-row" >
                 {galleryImages}
-              </div>
-            </div>
-          </div>
-
-        </div>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
       </div>
 
 

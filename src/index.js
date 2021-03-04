@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import LandingPage from './components/LandingPage/LandingPage';
+import Footer from './components/FooterPage/Footer';
 import './App.scss';
 
 import reportWebVitals from './reportWebVitals';
