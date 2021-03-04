@@ -1,123 +1,198 @@
-import React from 'react';
-import Form from 'react-bootstrap/Form'
+import React, { useState } from 'react';
+import * as emailjs from 'emailjs-com';
+import { Form, FormGroup, Label, Input } from 'reactstrap'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
-import {FaPhoneAlt } from 'react-icons/fa';
-import {HiOutlineMail} from 'react-icons/hi';
+import { FaPhoneAlt } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import FadeIn from 'react-fade-in';
+import swal from 'sweetalert';
 import './ContactPage.scss';
 
 
 
 const ContactPage = () => {
-  return (
-        <div> 
-                
-            <Container className='mt-5'>
-                <h1 className="contact-header-one">Get In Touch!</h1>
-                <h3 className='contact-header-two'>Contact Us for a Quote</h3>
-            </Container>
 
-            <Row className="mt-5 mb-5">
-                <Col md ={5} className="text-center">
-                    <FaPhoneAlt className="contact-icons"/>
-                    <h5 className="contact-info mt-3"> (347)-997-0315</h5>
-                </Col>
 
-                <Col md={7} className=" text-center">
-                   <HiOutlineMail className="contact-icons"/>
-                   <h5 className="contact-info mt-3">KCelectrialcontractorllc@gmail.com</h5>
-                </Col>
-            </Row>
+    const [fullName, setFullName] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [email, setEmail] = useState('');
+    const [service, setService] = useState('');
+    const [message, setMessage] = useState('');
 
-            <h1 className="contact-header-one mt-5">Open Hours</h1>
+
+    const handleSubmit = () => {
+
+        let templateParams = {
+            name: fullName,
+            phoneNumber: phoneNumber,
+            email: email,
+            to_name: 'kcelectricalcontractorllc',
+            service: service,
+            message: message
+
+        }
+
+        handleVerification(templateParams);
+
+    }
+
+
+    const handleVerification = (templateParams) => {
+
+        clearForm();
+
+        emailjs.send(
+            process.env.REACT_APP_SERVICE_ID,
+            process.env.REACT_APP_TEMPLATE,
+            templateParams,
+            process.env.REACT_APP_USER_ID_EMAILJS
+        ).then(function (response) {
+            console.log("Message sent to kcelectricalcontractorllc");
+            swal({
+                title: `Thank You ${fullName}!`,
+                text: `I'll be in touch soon!`,
+                icon: "success",
+                timer: 5000,
+                buttons: { cancel: null }
+
+            });
+        }, function (error) {
+            console.log("NO Message sent to kcelectricalcontractorllc: " + error);
+        });
+
+
+    }
+    const clearForm = () => {
+        setFullName('');
+        setEmail('');
+        setPhoneNumber('');
+        setMessage('');
+        setService('');
+    }
+
+
+
+    return (
+
+        <div>
+            <FadeIn transitionDuration="1000">
+                <Container className='mt-5'>
+                    <h1 className="contact-header-one">Get In Touch!</h1>
+                    <h3 className='contact-header-two'>Contact Us for a Quote</h3>
+                </Container>
+            </FadeIn>
+            <FadeIn transitionDuration="2000">
+                <Row className="mt-5 mb-5">
+                    <Col md={5} className="text-center">
+                        <FaPhoneAlt className="contact-icons" />
+                        <h5 className="contact-info mt-3"> (347)-997-0315</h5>
+                    </Col>
+
+                    <Col md={7} className=" text-center">
+                        <HiOutlineMail className="contact-icons" />
+                        <h5 className="contact-info mt-3">KCelectrialcontractorllc@gmail.com</h5>
+                    </Col>
+                </Row>
+
+                <h1 className="contact-header-one mt-5">Open Hours</h1>
                 <Col md={12}>
-                <Card className='contact-card '>
-                    <Card.Body> Monday to Friday: <br/>8AM to 4PM</Card.Body>
-            </Card>
-            </Col>
+                    <Card className='contact-card '>
+                        <Card.Body> Monday to Friday: <br />8AM to 4PM</Card.Body>
+                    </Card>
+                </Col>
 
-            
 
-            <Col md={12} className="contact-form mb-10 mt-5">
-                 <Form className="justify-content-center">
-                    <Form.Group controlid="formBasicName">
-                        <Form.Label className="d-block text-left">Name</Form.Label>
-                        <Form.Control 
-                       
-                        type="text" 
-                        name="name" 
-                        placeholder="Name" 
-                        required/> 
-                    </Form.Group>
-              
-                    <Form.Group controlid="formBasicPhone">
-                        <Form.Label className="d-block text-left">Phone Number</Form.Label>
-                        <Form.Control
-                        type="text"
-                        name="phone"
-                        placeholder="Phone Number"
-                        required
-                        />
-                    </Form.Group>
 
-                    <Form.Group controlid="formBasicEmail">
-                        <Form.Label className="d-block text-left">Email</Form.Label>
-                        <Form.Control
-                        type="email"
-                        name="email"
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
-                        placeholder="Email"
-                        required
-                        />
-                    </Form.Group>
+                <Col md={12} className="contact-form mb-10 mt-5">
+                    <Form className="justify-content-center">
+                        <FormGroup controlid="formBasicName">
+                            <Label className="d-block text-left">Name</Label>
+                            <Input
+                                type="text"
+                                name="name"
+                                placeholder="Name"
+                                value={fullName}
+                                onChange={e => setFullName(e.target.value)}
+                                required />
+                        </FormGroup>
 
-                    <Form.Group controlid="formBasicServices">
-                        <Form.Label className="d-block text-left">Services</Form.Label>
-                        <Form.Control 
-                        as="select" 
-                        defaultValue="Choose a service..."
-                        type="services"
-                            name="services"
-                            className=""
-                            placeholder="Please select a service"
-                            required>
-                            <option>Select a service</option>
-                            <option>Switch and outlet installation</option>
-                            <option>Electical and wiring repair</option>
-                            <option>Circuit breaker panel or fuse box installation</option>
-                            <option>Circuit breaker panel or fuse box repair</option>
-                            <option>Fan installation</option>
-                            <option>Generator installation</option>
-                            <option>Lighting installation</option>
-                            <option>Switch and outlet repair</option>
-                            <option>Wiring installation</option>
-                        </Form.Control>
-                    
-                    </Form.Group>
+                        <FormGroup controlid="formBasicPhone">
+                            <Label className="d-block text-left">Phone Number</Label>
+                            <Input
+                                type="text"
+                                name="phone"
+                                placeholder="Phone Number"
+                                value={phoneNumber}
+                                onChange={e => setPhoneNumber(e.target.value)}
+                                required
+                            />
+                        </FormGroup>
 
-                    <Form.Group controlid="formBasicMessage">
-                        <Form.Label className="d-block text-left">Message</Form.Label>
-                        <Form.Control as="textarea" row={3}
-                        type="textarea"
-                        name="message"
-                        placeholder="Any additional information, please enter here." 
-                        required
-                        />
-                    </Form.Group>
-                    
-                    <Row className="justify-content-center">
-                        <Button type="submit">Submit</Button>
-                    </Row>
-            </Form>
-        </Col>
-         
-    </div>
-   
-      )};
- 
-  
-  export default ContactPage;
-  
+                        <FormGroup controlid="formBasicEmail">
+                            <Label className="d-block text-left">Email</Label>
+                            <Input
+                                type="email"
+                                name="email"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                placeholder="Email"
+                                value={email}
+                                onChange={e => setEmail(e.target.value)}
+                                required
+                            />
+                        </FormGroup>
+
+                        <FormGroup controlid="formBasicServices">
+                            <Label className="d-block text-left">Services</Label>
+                            <Input
+                                type="select"
+                                name="services"
+                                className=""
+                                placeholder="Choose a service..."
+                                value={service}
+                                onChange={e => setService(e.target.value)}
+                                required>
+                                <option></option>
+                                <option disabled > -- Select a service -- </option>
+                                <option>Switch and outlet installation</option>
+                                <option>Electical and wiring repair</option>
+                                <option>Circuit breaker panel or fuse box installation</option>
+                                <option>Circuit breaker panel or fuse box repair</option>
+                                <option>Fan installation</option>
+                                <option>Generator installation</option>
+                                <option>Lighting installation</option>
+                                <option>Switch and outlet repair</option>
+                                <option>Wiring installation</option>
+                            </Input>
+
+
+                        </FormGroup>
+
+                        <FormGroup controlid="formBasicMessage">
+                            <Label className="d-block text-left">Message</Label>
+                            <Input row={3}
+                                type="textarea"
+                                name="message"
+                                placeholder="Any additional information, please enter here."
+                                value={message}
+                                onChange={e => setMessage(e.target.value)}
+                                required
+                            />
+                        </FormGroup>
+
+                        <Row className="justify-content-center">
+                            <Button onClick={handleSubmit}>Submit</Button>
+                        </Row>
+                    </Form>
+                </Col>
+            </FadeIn>
+        </div>
+
+    )
+};
+
+
+export default ContactPage;

@@ -9,20 +9,20 @@ import './ServicePage.scss';
 const ServicePage = () => {
     return (
         <React.Fragment>
-            <div className='services-div container'>
+            <div className='services-div container mt-5'>
                 <h1 className='services-header text-center'>Electrical Services</h1>
                 <div className="container">
                     <div className='row mb-5'>
 
-                        <div className="col-md-5"  id="kc-icons">
-                            <img className='services-logo icons' src={plugLogo}/>
-                            
+                        <div className="col-md-5" id="kc-icons">
+                            <img className='services-logo icons' src={plugLogo} />
+
                         </div>
                         <div className="col-md-5" id="kc-icons">
-                            <img className='services-logo icons' src={brokenCables}/>
+                            <img className='services-logo icons' src={brokenCables} />
                         </div>
                         <div className="col-md-2" id="kc-icons">
-                            <img className='services-logo icons' src={multimeter}/>
+                            <img className='services-logo icons' src={multimeter} />
                         </div>
                     </div>
 
