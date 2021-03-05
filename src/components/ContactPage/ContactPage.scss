@@ -1,0 +1,132 @@
+$text: center;
+$line: 1.2;
+$bg-primary:#59bdee;
+
+
+.contact-header-one {
+    font-size: 3vw;
+    line-height: $line;
+    text-align: $text;
+    font-family: 'Roboto Condensed';
+}
+
+
+.contact-header-two {
+    font-size: 2.5vw;
+    line-height: $line;
+    text-align: $text;
+    font-family: 'Roboto';
+}
+
+.contact-icons {
+    font-size: 30px;
+}
+
+.contact-info {
+    font-size: 1vw;
+    font-family: 'Roboto';
+}
+
+.contact-card {
+
+    background-color: $bg-primary;
+    left: 50%;
+    border-radius: 1rem;
+    width: 30vw;
+    height: auto;
+    transform: translate(-50%);
+    text-align: center;
+    white-space: pre-wrap;
+    border: none;
+    color: white;
+
+}
+
+.contact-form {
+    width: 35vw;
+    margin: 0 auto;
+
+    padding-bottom: 10%;
+}
+
+.form-control {
+    border: 2px solid $bg-primary;
+}
+
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color: black;
+    border-color: black;
+}
+
+.btn-primary {
+    color: $bg-primary;
+    background-color: white;
+    border-color: $bg-primary;
+}
+
+@media only screen and (max-width:768px) {
+
+    .contact-header-one {
+        font-size: 8.5vw;
+        line-height: $line;
+        text-align: $text;
+        font-family: 'Roboto Condensed';
+    }
+
+    .contact-header-two {
+        font-size: 3.5vw;
+        line-height: $line;
+        text-align: $text;
+        font-family: 'Roboto';
+    }
+
+    .contact-info {
+        font-size: 3.3vw;
+        font-family: 'Roboto';
+    }
+
+    .contact-card {
+
+        background-color: $bg-primary;
+        left: 50%;
+        border-radius: 0.5rem;
+        width: 48vw;
+        transform: translate(-50%);
+        text-align: center;
+        white-space: pre-wrap;
+        border: none;
+        color: white;
+
+    }
+
+    .contact-form {
+        width: 65vw;
+        margin: 0 auto;
+    }
+
+    .btn-primary:hover,
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary.active,
+    .open>.dropdown-toggle.btn-primary {
+        color: #fff;
+        background-color: black;
+        border-color: black;
+    }
+
+    .btn-primary {
+        color: $bg-primary;
+        background-color: white;
+        border-color: $bg-primary;
+    }
+
+
+
+
+}
