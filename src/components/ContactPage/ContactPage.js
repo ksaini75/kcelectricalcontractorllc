@@ -183,7 +183,7 @@ const ContactPage = () => {
                             />
                         </FormGroup>
 
-                        <Row className="justify-content-center">
+                        <Row className="justify-content-center mb-2">
                             <Button onClick={handleSubmit}>Submit</Button>
                         </Row>
                     </Form>
