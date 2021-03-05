@@ -20,6 +20,7 @@ const routing = (
                         <Route path='/Services' exact component={ServicePage} />
                         <Route path='/Contact' exact component={ContactPage} />
                 </Switch>
+                <Footer/>
         </Router>
 
 )
