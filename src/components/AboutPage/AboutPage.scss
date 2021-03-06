@@ -1,12 +1,16 @@
 $bg-primary: #59bdee;
 
+#about {
+    background-color: black;
+}
+
 .about-page {
     background-color: black;
 }
 
 .about-title {
     color: white;
-    
+
 }
 
 .about-text {
@@ -49,22 +53,24 @@ $bg-primary: #59bdee;
 }
 
 @media only screen and (max-width:767px) {
-    .about-text { 
-        font-size: 20px; 
-        text-align: center; 
-        width: auto; 
+    .about-text {
+        font-size: 20px;
+        text-align: center;
+        width: auto;
         padding: 0 20px;
     }
-    .about-title{
+
+    .about-title {
         text-align: center;
         font-size: 2rem;
     }
 
     #second {
-        order: 2!important;
+        order: 2 !important;
     }
+
     #first {
-        order: 1!important;
+        order: 1 !important;
         margin: 0 25px;
-     }
     }
+}
