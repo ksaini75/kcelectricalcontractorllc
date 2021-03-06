@@ -108,7 +108,7 @@ const AboutPage = () => {
 
   return (
     <React.Fragment>
-      <div className="about-page mb-5" id="about">
+      <div className="about-page" id="about">
         <Container className="text-center">
           <Row id="about-section">
             <Col className="mt-5" md={6} id="first">

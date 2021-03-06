@@ -10,11 +10,14 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import FadeIn from 'react-fade-in';
 import swal from 'sweetalert';
+import ReCAPTCHA from "react-google-recaptcha";
 import './ContactPage.scss';
 
 
 
 const ContactPage = () => {
+
+    const [isVerified, setVerification] = useState(false);
 
 
     const [fullName, setFullName] = useState('');
@@ -22,6 +25,14 @@ const ContactPage = () => {
     const [email, setEmail] = useState('');
     const [service, setService] = useState('');
     const [message, setMessage] = useState('');
+
+
+    const isEnabled = email.length > 0 && fullName.length > 0 &&
+        phoneNumber.length > 0 && service.length > 0 && message.length > 0 && isVerified;
+
+    const verifyCallback = () => {
+        setVerification(true);
+    }
 
 
     const handleSubmit = () => {
@@ -43,28 +54,36 @@ const ContactPage = () => {
 
     const handleVerification = (templateParams) => {
 
-        clearForm();
 
-        emailjs.send(
-            process.env.REACT_APP_SERVICE_ID,
-            process.env.REACT_APP_TEMPLATE,
-            templateParams,
-            process.env.REACT_APP_USER_ID_EMAILJS
-        ).then(function (response) {
-            console.log("Message sent to kcelectricalcontractorllc");
-            swal({
-                title: `Thank You ${fullName}!`,
-                text: `I'll be in touch soon!`,
-                icon: "success",
-                timer: 5000,
-                buttons: { cancel: null }
+        if (isVerified) {
+            emailjs.send(
+                process.env.REACT_APP_SERVICE_ID,
+                process.env.REACT_APP_TEMPLATE,
+                templateParams,
+                process.env.REACT_APP_USER_ID_EMAILJS
+            ).then(function (response) {
+                console.log("Message sent to kcelectricalcontractorllc");
+                swal({
+                    title: `Thank You ${fullName}!`,
+                    text: `I'll be in touch soon!`,
+                    icon: "success",
+                    timer: 5000,
+                    buttons: { cancel: null }
 
+                });
+            }, function (error) {
+                swal({
+                    title: `Message not sent!`,
+                    text: `Please email me: KCelectrialcontractorllc@gmail.com`,
+                    icon: "error",
+                    timer: 5000,
+                    buttons: { cancel: null }
+
+                });
+                console.log("NO Message sent to kcelectricalcontractorllc: " + error);
             });
-        }, function (error) {
-            console.log("NO Message sent to kcelectricalcontractorllc: " + error);
-        });
-
-
+            clearForm();
+        }
     }
     const clearForm = () => {
         setFullName('');
@@ -117,7 +136,7 @@ const ContactPage = () => {
                                 placeholder="Name"
                                 value={fullName}
                                 onChange={e => setFullName(e.target.value)}
-                                required />
+                            />
                         </FormGroup>
 
                         <FormGroup controlid="formBasicPhone">
@@ -128,7 +147,7 @@ const ContactPage = () => {
                                 placeholder="Phone Number"
                                 value={phoneNumber}
                                 onChange={e => setPhoneNumber(e.target.value)}
-                                required
+
                             />
                         </FormGroup>
 
@@ -141,7 +160,7 @@ const ContactPage = () => {
                                 placeholder="Email"
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
-                                required
+
                             />
                         </FormGroup>
 
@@ -154,7 +173,7 @@ const ContactPage = () => {
                                 placeholder="Choose a service..."
                                 value={service}
                                 onChange={e => setService(e.target.value)}
-                                required>
+                            >
                                 <option></option>
                                 <option disabled > -- Select a service -- </option>
                                 <option>Switch and outlet installation</option>
@@ -179,13 +198,17 @@ const ContactPage = () => {
                                 placeholder="Any additional information, please enter here."
                                 value={message}
                                 onChange={e => setMessage(e.target.value)}
-                                required
                             />
                         </FormGroup>
-
+                        <ReCAPTCHA className="mb-4 d-flex justify-content-center g-recaptcha"
+                            sitekey={process.env.REACT_APP_SITE_KEY}
+                            onChange={verifyCallback}
+                        />
                         <Row className="justify-content-center mb-2">
-                            <Button onClick={handleSubmit}>Submit</Button>
+
+                            <Button type="submit" onClick={handleSubmit} disabled={!isEnabled}>Submit</Button>
                         </Row>
+
                     </Form>
                 </Col>
             </FadeIn>

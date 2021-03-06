@@ -14,9 +14,9 @@ const ServicePage = () => {
     return (
         <React.Fragment>
             <Container className='services-div'>
-                <h1 className='services-header text-center'>Electrical Services</h1>
+                <h1 className='services-header text-center mt-5'>Electrical Services</h1>
                 <Container>
-                    <Row className='mb-5'>
+                    <Row className='mb-5 mt-5'>
 
                         <Col md={5} id="kc-icons">
                             <Image className='services-logo icons' src={plugLogo} />
@@ -32,7 +32,7 @@ const ServicePage = () => {
 
                     <Row className='mb-5'>
 
-                        <Col className="service-text"  md={5} id="kc-text">
+                        <Col className="service-text" md={5} id="kc-text">
                             <p> <GiLightBulb /> Switch and outlet installation</p>
                             <p> <GiLightBulb />Electirical and wiring repair</p>
                             <p> <GiLightBulb />Remodeling</p>
