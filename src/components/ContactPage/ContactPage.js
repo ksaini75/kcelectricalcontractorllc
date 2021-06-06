@@ -74,7 +74,7 @@ const ContactPage = () => {
             }, function (error) {
                 swal({
                     title: `Message not sent!`,
-                    text: `Please email me: KCelectrialcontractorllc@gmail.com`,
+                    text: `Please email me: kcelectricalcontractorllc@gmail.com`,
                     icon: "error",
                     timer: 5000,
                     buttons: { cancel: null }
@@ -108,12 +108,12 @@ const ContactPage = () => {
                 <Row className="mt-5 mb-5">
                     <Col md={5} className="text-center">
                         <FaPhoneAlt className="contact-icons" />
-                        <h5 className="contact-info mt-3"> (347)-997-0315</h5>
+                        <h5 className="contact-info mt-3"><a href="tel:3479970315"> (347)-997-0315</a></h5>
                     </Col>
 
                     <Col md={7} className=" text-center">
                         <HiOutlineMail className="contact-icons" />
-                        <h5 className="contact-info mt-3">KCelectrialcontractorllc@gmail.com</h5>
+                        <h5 className="contact-info mt-3"><a href="mailto:kcelectricalcontractorllc@gmail.com?subject=KCElectricalcontractorLLC Service Request">kcelectricalcontractorllc@gmail.com</a></h5>
                     </Col>
                 </Row>
 
@@ -185,6 +185,7 @@ const ContactPage = () => {
                                 <option>Lighting installation</option>
                                 <option>Switch and outlet repair</option>
                                 <option>Wiring installation</option>
+                                <option>Tesla Charger Installation</option>
                             </Input>
 
 
