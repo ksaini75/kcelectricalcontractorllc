@@ -10,12 +10,13 @@ $bg-primary: #59bdee;
 
 .about-title {
     color: white;
+    font-size: 1.5rem;
 
 }
 
 .about-text {
     color: white;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .gallery-row {
@@ -54,7 +55,7 @@ $bg-primary: #59bdee;
 
 @media only screen and (max-width:767px) {
     .about-text {
-        font-size: 20px;
+        font-size: 15px;
         text-align: center;
         width: auto;
         padding: 0 20px;
@@ -62,7 +63,7 @@ $bg-primary: #59bdee;
 
     .about-title {
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.3rem;
     }
 
     #second {

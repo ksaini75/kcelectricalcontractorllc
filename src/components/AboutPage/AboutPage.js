@@ -113,10 +113,15 @@ const AboutPage = () => {
           <Row id="about-section">
             <Col className="mt-5" md={6} id="first">
               <div>
-                <h1 className="about-title text-center mb-4" >About Me</h1>
+                <h1 className="about-title text-center mb-4" >About KCElectricalContractorLLC</h1>
               </div>
               <div>
-                <p className="about-text text-center mb-5" >I have 8 years in residential and commercial and also know how to troubleshoot and also know how to install panels how to wire trace install new breakers and how to install ceiling fans sconces light in new and old construction services ceiling fan and new and old works.
+                <p className="about-text text-center mb-5" >
+                  We are glad to offer you a wide range of residential electrical services - from changing fixtures, upgrading panels, garden lighting to outdoor outlets and much more. 
+                  <br/>
+                  <br/>
+                  Why should you choose us? We are a reliable, affordable company and our main goal is quality and customer satisfaction.
+                  No job is too small for us. 
             </p>
               </div>
             </Col>

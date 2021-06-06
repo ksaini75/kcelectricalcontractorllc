@@ -17,7 +17,7 @@ const LandingPage = () => {
             <div className="main-img mb-5" id="home">
                 <div className="container text-center">
                     <p className="company-name text-center">KCElectricalContractorLLC</p>
-                    <p className="company-tag">Company is Insured</p>
+                    <p className="company-tag">Company is Insured and Licensed</p>
                     <button className="company-btn" onClick={onBtnClick}>Request An Estimate</button>
                 </div>
             </div>
