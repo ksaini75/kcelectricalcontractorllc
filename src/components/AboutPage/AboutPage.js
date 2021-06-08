@@ -117,7 +117,7 @@ const AboutPage = () => {
               </div>
               <div>
                 <p className="about-text text-center mb-5" >
-                  We are glad to offer you a wide range of residential electrical services - from changing fixtures, upgrading panels, garden lighting to outdoor outlets and much more. 
+                  We are glad to offer you a wide range of residential and commercial electrical services - from changing fixtures, upgrading panels, garden lighting to outdoor outlets and much more. 
                   <br/>
                   <br/>
                   Why should you choose us? We are a reliable, affordable company and our main goal is quality and customer satisfaction.

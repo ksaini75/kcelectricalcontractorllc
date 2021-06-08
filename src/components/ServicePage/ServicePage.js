@@ -44,6 +44,7 @@ const ServicePage = () => {
                             <p> <GiLightBulb /> Renovations or additions Indoor or outdoor lighting</p>
                             <p><GiLightBulb /> Inspections</p>
                             <p><GiLightBulb /> Wiring installation/Wiring Repairs</p>
+                            <p><GiLightBulb/> Tesla Charger Installation</p>
                         </Col>
                         <Col className="service-text" md={2} id="kc-text">
                             <p><GiLightBulb /> Fan installation</p>

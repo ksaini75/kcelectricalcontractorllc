@@ -10,16 +10,21 @@ class Footer extends Component {
 
             <div className="footer_bg pt-5 pb-3  text-center" id="footer">
                 <Row>
-                    <Col md={6} className="mr-auto">
+                    <Col md={4} className="mr-auto">
                         <p>
                             <a className="insta-icon" href="https://www.instagram.com/kcelectricalcontractorllc/?igshid=13e62ll0r2ahi" target="_blank" rel="noopener noreferrer">
                                 <FaInstagram />
                             </a>
                         </p>
                     </Col>
+                    <Col md={4} className="mr-auto">
+                        <p>
+                        We also accept Zelle, Venmo and most major credit cards.
+                        </p>
+                    </Col>
 
-                    <Col md={6} className="ml-auto">
-                        <p className='footer-email'> KCelectrialcontractorllc@gmail.com </p>
+                    <Col md={4} className="ml-auto">
+                        <p className='footer-email'> kcelectricalcontractorllc@gmail.com </p>
                     </Col>
 
                 </Row>
